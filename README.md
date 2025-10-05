@@ -25,8 +25,9 @@ L’aplicació està desplegada automàticament a [Vercel/Netlify](URL_AQUI).
 - **Repositori GitHub:** https://github.com/BryanRuzafaGon/tr0
 - **App desplegada:** http://a24bryruzgon.daw.inspedralbes.cat/client/
 - **Dashboard SonarCloud:** ![foto](image.png)
-- **Video:**
+- **Video:** https://youtu.be/DJNMvF6fXRk
 
 
 
 ---
+
