@@ -19,8 +19,7 @@ Aquest projecte s’alinea amb l’ODS 4: Educació de Qualitat. L’aplicació 
 - S’ha analitzat la qualitat del codi amb SonarCloud
 
 ## Desplegament
-L’aplicació està desplegada automàticament a [Vercel/Netlify](URL_AQUI).
-
+L’aplicació està desplegada automàticament a tr0.vercel.app
 ## Enllaços
 - **Repositori GitHub:** https://github.com/BryanRuzafaGon/tr0
 - **App desplegada:** http://a24bryruzgon.daw.inspedralbes.cat/client/
@@ -30,4 +29,5 @@ L’aplicació està desplegada automàticament a [Vercel/Netlify](URL_AQUI).
 
 
 ---
+
 
