@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Joc d'Endevinar Banderes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div id="contenidor-principal">
+        <!-- Pantalla d'inici amb nom d'usuari -->
+        <div id="pantalla-inici">
+            <div class="hero-section">
+                <div class="logo-area">
+                    <div class="logo-container">
+                        <div class="logo-trivia">Trivia</div>
+                        <div class="logo-flags">
+                            <span class="flag-letter f">F</span>
+                            <span class="flag-letter l">L</span>
+                            <span class="flag-letter a">A</span>
+                            <span class="flag-letter g">G</span>
+                            <span class="flag-letter s">S</span>
+                        </div>
+                        <div class="logo-tagline">Posa a prova els teus coneixements de geografia</div>
+                    </div>
+                </div>
+                
+                <!-- Card de login -->
+                <div class="login-card">
+                    <!-- Formulario para nuevos usuarios -->
+                    <div id="formulari-nom" class="name-form">
+                        <h3>Com et dius?</h3>
+                        <div class="input-container">
+                            <input type="text" id="nom-usuari" placeholder="Escriu el teu nom" required>
+                            <div class="input-line"></div>
+                        </div>
+                        <button id="btn-començar" class="primary-button">
+                            <span>Començar a Jugar</span>
+                            <div class="button-ripple"></div>
+                        </button>
+                    </div>
+                    
+                    <!-- Saludo para usuarios que ya jugaron antes -->
+                    <div id="salutacio" class="hidden welcome-section">
+                        <div class="welcome-icon">👋</div>
+                        <h3>Benvingut de nou!</h3>
+                        <p class="username-display">Hola, <span id="nom-guardat"></span></p>
+                        <div class="button-group">
+                            <button id="btn-continuar" class="primary-button">
+                                <span>Continuar</span>
+                            </button>
+                            <button id="btn-esborrar-nom" class="secondary-button">
+                                <span>Canviar Usuari</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats del juego -->
+                <div class="game-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-content">
+                            <div class="stat-number">195+</div>
+                            <div class="stat-label">Països</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-number">30</div>
+                            <div class="stat-label">Segons per ronda</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-content">
+                            <div class="stat-number">Top</div>
+                            <div class="stat-label">Rànquing mundial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla del joc -->
+        <div id="pantalla-joc" class="hidden">
+            <!-- Información de la partida  -->
+            <div id="info-partida">
+                <div id="marcador">
+                    <span>Encerts: <span id="num-pregunta">0</span></span>
+                    <span>Precisió: <span id="puntuacio">0</span></span>
+                </div>
+                <div id="temps">
+                    <span>Temps restant: <span id="comptador-temps">30</span> segons</span>
+                    <!-- Barra de tiempo -->
+                    <div id="barra-temps-container">
+                        <div id="barra-temps-fons">
+                            <div id="barra-temps"></div>
+                        </div>
+                        <!-- Etiquetas de tiempo -->
+                        <div id="etiquetes-temps">
+                            <span class="etq" data-t="start">0s</span>
+                            <span class="etq" data-t="mid">15s</span>
+                            <span class="etq" data-t="end">30s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="partida">
+                <!-- Aquí es carregarà la pregunta actual -->
+            </div>
+            
+            <!-- Navegación entre preguntas -->
+            <div id="navegacio" class="hidden">
+                <button id="btn-anterior">Anterior</button>
+                <button id="btn-següent">Següent</button>
+            </div>
+            
+
+        </div>
+
+        <!-- Pantalla de resultats -->
+        <div id="pantalla-resultats" class="hidden compacte">
+            <h2>Resultats Finals</h2>
+            <div id="resum-resultats"></div>
+            <!-- Botones de acción -->
+            <div class="accions-resultats">
+                <button id="btn-nova-partida">Nova Partida</button>
+                <button id="btn-ver-ranking">Veure Rànquing</button>
+            </div>
+        </div>
+
+        <!-- Pantalla Ranking -->
+        <div id="pantalla-ranking" class="hidden">
+            <h2>🏆 Rànquing Top 10</h2>
+            <div id="ranking-wrapper">
+                <div id="llista-ranking"></div>
+                <div id="ranking-extra"></div>
+            </div>
+            <div class="accions-ranking">
+                <button id="btn-tornar-resultats">Tornar</button>
+                <button id="btn-nova-partida-2">Nova Partida</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="app.js"></script>
+</body>
+</html>

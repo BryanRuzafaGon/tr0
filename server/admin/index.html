@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administració - Joc de Banderes</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel d'Administració - Joc de Banderes</h1>
+            <nav>
+                <button id="btn-llistar" class="nav-btn active">Llistar Preguntes</button>
+                <button id="btn-crear" class="nav-btn">Crear Pregunta</button>
+                <button id="btn-estadistiques" class="nav-btn">Estadístiques</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Secció per llistar preguntes -->
+            <section id="seccio-llistar" class="section active">
+                <h2>Llistar Preguntes</h2>
+                <div class="controls">
+                    <input type="text" id="cerca-pregunta" placeholder="Cercar pregunta...">
+                    <button id="btn-cercar">Cercar</button>
+                    <button id="btn-recarregar">Recarregar</button>
+                </div>
+                <div id="llista-preguntes">
+                    <!-- Les preguntes es carregaran aquí -->
+                </div>
+            </section>
+
+            <!-- Secció per crear/editar pregunta -->
+            <section id="seccio-formulari" class="section">
+                <h2 id="titol-formulari">Crear Nova Pregunta</h2>
+                <form id="formulari-pregunta">
+                    <input type="hidden" id="pregunta-id">
+                    
+                    <div class="form-group">
+                        <label for="pregunta-text">Pregunta:</label>
+                        <textarea id="pregunta-text" required placeholder="A quin país pertany aquesta bandera?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pregunta-imatge">URL de la imatge:</label>
+                        <input type="url" id="pregunta-imatge" required placeholder="https://...">
+                        <div id="preview-imatge"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Respostes:</label>
+                        <div class="respostes-grid">
+                            <input type="text" id="resposta-1" placeholder="Resposta 1" required>
+                            <input type="text" id="resposta-2" placeholder="Resposta 2" required>
+                            <input type="text" id="resposta-3" placeholder="Resposta 3" required>
+                            <input type="text" id="resposta-4" placeholder="Resposta 4" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resposta-correcta">Resposta correcta:</label>
+                        <select id="resposta-correcta" required>
+                            <option value="">Selecciona la resposta correcta</option>
+                            <option value="0">Resposta 1</option>
+                            <option value="1">Resposta 2</option>
+                            <option value="2">Resposta 3</option>
+                            <option value="3">Resposta 4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="pregunta-activa" checked>
+                            Pregunta activa
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btn-guardar">Guardar Pregunta</button>
+                        <button type="button" id="btn-cancel·lar">Cancel·lar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Secció d'estadístiques -->
+            <section id="seccio-estadistiques" class="section">
+                <h2>Estadístiques del Joc</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Preguntes</h3>
+                        <p id="total-preguntes">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Preguntes Actives</h3>
+                        <p id="preguntes-actives">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Partides</h3>
+                        <p id="total-partides">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Puntuació Mitjana</h3>
+                        <p id="puntuacio-mitjana">0%</p>
+                    </div>
+                </div>
+
+                <div class="recent-sessions">
+                    <h3>Sessions Recents</h3>
+                    <div id="sessions-recents">
+                        <!-- Sessions es carregaran aquí -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal de confirmació -->
+    <div id="modal-confirmacio" class="modal">
+        <div class="modal-content">
+            <h3>Confirmar acció</h3>
+            <p id="modal-missatge"></p>
+            <div class="modal-actions">
+                <button id="modal-confirmar" class="btn-danger">Confirmar</button>
+                <button id="modal-cancel·lar">Cancel·lar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

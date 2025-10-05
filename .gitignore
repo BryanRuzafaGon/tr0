@@ -1,0 +1,33 @@
+# Logs
+logs/
+*.log
+
+# Sistema operatiu
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP
+vendor/
+composer.lock
+
+# Fitxers temporals
+tmp/
+temp/
+cache/
+
+# Configuració local (si tens fitxers de configuració específics d'entorn)
+config/local.php
+.env
+
+# Fitxers de backup de base de dades
+*.sql.backup
+*.bak
+
+# Fitxers de sessió
+sessions/
